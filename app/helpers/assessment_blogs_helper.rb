@@ -1,0 +1,2 @@
+module AssessmentBlogsHelper
+end
