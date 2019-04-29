@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class EntrepereneurshipBlogTest < ActiveSupport::TestCase
+class EntrepreneurshipBlogTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

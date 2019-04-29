@@ -77,31 +77,17 @@
             <li class=" dropdown <%= params[:controller] == 'entrepreneurships' ? 'active' : ''%>"><%= link_to  "Entrepreneurship", entrepreneurships_path, class:'dropdown-toggle', 'data-toggle' => 'dropdown' %>
             <ul class="dropdown-menu multi-column columns-3">
             <div class="row">
+              <% if @entrepreneurships.exists? %>
+              <% @entrepreneurships.each do |eship| %> 
                 <div class="col-md-4">
                     <ul class="multi-column-dropdown list-unstyled">
-                        <li><a href="#">Innovation</a></li>
-                        <li><a href="#">Creativity</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">Link</a></li>
+                        <li><%= link_to  eship.name, entrepreneurship_path(eship) %></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <ul class="multi-column-dropdown list-unstyled">
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="multi-column-dropdown list-unstyled">
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                    </ul>
-                </div>
+                <% end %>
+                <% else %>
+                <p></p>
+                <% end %>  
             </div>
           </ul>
             </li>

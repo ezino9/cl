@@ -1,6 +1,6 @@
 <div class="row">
     <!-- Left sidebar -->
-    <div class="col-md-4">
+    <div class="col-md-2">
         <% if @assessments.exists? %>
           <div class="list-group">
               <% @assessments.each do |assessment| %>
@@ -13,7 +13,7 @@
     </div><!-- End of leftside bar -->
 
     <!-- main content-->
-    <div class="col-md-8">
+    <div class="col-md-10">
         <% if @assessment.name == "Employment Test" %>
            <h2 class="page-header">Employment Test</h2>
             <% if @blogs.exists?%>

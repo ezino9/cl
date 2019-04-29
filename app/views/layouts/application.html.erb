@@ -14,26 +14,9 @@
 
   <body>
     <%= render  "partials/navigation" %>
-    <div class="container">
-      <i class="fas fa-flag"></i>
-      <i class="far fa-address-book strong"></i>
-      <i id="my-icon" class="fab fa-font-awesome strong"></i>
+    <div class="container" id="container">
         <%= yield %>     
-
-    
-
     </div><!-- /.container -->
-
-
-      <%= render  "partials/footer" %>
-      <script>
-        $('ul.nav li.dropdown, li.dropdown-submenu').hover(function () {
-            $('> .dropdown-menu', $(this)).stop(true, true).delay(1000).show();
-            $(this).addClass('open');
-        }, function () {
-            $('> .dropdown-menu', $(this)).stop(true, true).delay(1000).hide();
-            $(this).removeClass('open');
-        });
-      </script>
+      <%= render  "partials/footer" %> 
   </body>
 </html>

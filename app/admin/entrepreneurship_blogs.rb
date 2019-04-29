@@ -1,4 +1,4 @@
-ActiveAdmin.register Entrepereneurship do
+ActiveAdmin.register EntrepreneurshipBlog do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -11,7 +11,7 @@ ActiveAdmin.register Entrepereneurship do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+permit_params :title, :entrepreneurship_id, :body
 
-permit_params :name
 
 end

@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::Base
 
-    before_action :getAssessment, :geteship
+    before_action :getAssessment #, only: [:show]
+    before_action :geteship #, only: [:show]
     def getAssessment
-        @assessments = Assessment.all
+        @assessments = Assessment.order("name ASC")
     end
 
     def geteship
-        @eships = Entrepereneurship.all
+        @entrepreneurships = Entrepreneurship.order("name ASC")
     end
 end
